@@ -113,15 +113,13 @@ const Home: React.FC = () => {
       if (guess === targetWord) {
         setMessage("Congratulations! You've guessed the word!");
 
-        const { data, error } = await supabase
-          .from<User_Attempts>("user_attempts")
-          .insert([
-            {
-              attempts: currentAttempt,
-              username: groupName,
-              status: "success",
-            },
-          ]);
+        const { data, error } = await supabase.from("user_attempts").insert([
+          {
+            attempts: currentAttempt,
+            username: groupName,
+            status: "success",
+          },
+        ]);
 
         if (error) {
           console.log("Error inserting:", error);
