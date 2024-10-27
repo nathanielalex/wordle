@@ -7,7 +7,7 @@ import styles from "./css/Home.module.css";
 
 import { createClient } from "@/utils/supabase/client";
 
-const targetWord = "agama";
+const targetWord = "moral";
 const maxAttempts = 6;
 
 const Home: React.FC = () => {
