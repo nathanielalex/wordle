@@ -1,0 +1,129 @@
+/* styles/Home.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 50px);
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.correct {
+  background-color: green;
+  color: white;
+}
+
+.present {
+  background-color: yellow;
+  color: black;
+}
+
+.absent {
+  background-color: grey;
+  color: white;
+}
+
+.name {
+  margin: 10px 0;
+}
+
+.name p {
+  text-align: center;
+}
+
+.name button {
+  margin-left: 10px;
+}
+
+.name input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.name input:focus {
+  border-color: #0070f3; /* Change to your desired focus color */
+  outline: none;
+}
+
+.name button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #1f74d5; /* Primary button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.name button:hover {
+  background-color: #005bb5; /* Darker shade on hover */
+}
+
+.name h2 {
+  font-weight: 700;
+}
+
+.groupName {
+  color: #005bb5;
+}
+
+.guess button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #1f74d5; /* Primary button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.guess button:hover {
+  background-color: #005bb5; /* Darker shade on hover */
+}
+
+.guess input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.guess input:focus {
+  border-color: #0070f3; /* Change to your desired focus color */
+  outline: none;
+}
+
+.guess {
+  display: flex;
+  flex-direction: column;
+}
+
+.guess button:disabled {
+  background-color: #ccc;
+}
