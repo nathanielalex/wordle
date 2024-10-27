@@ -171,6 +171,7 @@ const Home: React.FC = () => {
               placeholder="Kelompok 0"
               value={groupName}
               onChange={(e) => setGroupName(e.target.value)}
+              className="dark:text-primary-foreground"
             />
             <button onClick={handleConfirm}>Confirm</button>
           </div>
@@ -194,6 +195,7 @@ const Home: React.FC = () => {
           value={guessInput}
           onChange={(e) => setGuessInput(e.target.value)}
           maxLength={5}
+          className="dark:text-primary-foreground"
         />
         <button onClick={handleGuessSubmit} disabled={isButtonDisabled}>
           Submit Guess
