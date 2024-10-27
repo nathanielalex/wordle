@@ -128,15 +128,13 @@ const Home: React.FC = () => {
         router.refresh();
       } else if (currentAttempt + 1 === maxAttempts) {
         setMessage(`Game over! The word was "${targetWord}".`);
-        const { data, error } = await supabase
-          .from<User_Attempts>("user_attempts")
-          .insert([
-            {
-              attempts: currentAttempt,
-              username: groupName,
-              status: "fail",
-            },
-          ]);
+        const { data, error } = await supabase.from("user_attempts").insert([
+          {
+            attempts: currentAttempt,
+            username: groupName,
+            status: "fail",
+          },
+        ]);
 
         if (error) {
           console.log("Error inserting:", error);
