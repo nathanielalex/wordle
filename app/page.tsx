@@ -50,8 +50,8 @@ const Home: React.FC = () => {
     const url = `https://dictionary-by-api-ninjas.p.rapidapi.com/v1/dictionary?word=${word}`;
     const options = {
       headers: {
-        "x-rapidapi-key": "e2a4549841msh5b904a600b98815p1ccd08jsna9585b2deded",
-        "x-rapidapi-host": "dictionary-by-api-ninjas.p.rapidapi.com",
+        "x-rapidapi-key": process.env.RAPIDAPI_KEY,
+        "x-rapidapi-host": process.env.RAPIDAPI_HOST,
       },
     };
 
